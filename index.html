@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+    <!-- FavIcon Link -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- FontAwesome Link -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- myStyle Link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- mediaStyle Link -->
+    <link rel="stylesheet" href="css/media.css" />
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <!-- SweetAlert Theme Link -->
+    <link rel="stylesheet" href="css/bulma.min.css">
+  </head>
+  <body data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container d-flex justify-content-between">
+        <a class="navbar-brand fs-1" href="#">CRUDS</a>
+        <i class="fa-solid fa-sun d-none fs-3 text-white"></i>
+        <i class="fa-solid fa-moon fs-3"></i>
+      </div>
+    </nav>
+    <div class="container my-4">
+      <form class="row g-3">
+        <div class="col-12">
+          <label for="productName">Enter Product Name</label>
+          <input
+            id="productName"
+            name="productName"
+            type="text"
+            class="form-control"
+            placeholder="Product Name..."
+          />
+          <div class="feed-back invalid-feedback d-none"></div>
+        </div>
+        <div class="col-12">
+          <label for="productPrice">Enter Product Price</label>
+          <input
+            id="productPrice"
+            name="productPrice"
+            type="number"
+            class="form-control"
+            placeholder="Product Price..."
+          />
+          <div class="feed-back valid-feedback d-none"></div>
+        </div>
+        <div class="col-12">
+          <label for="productCategory">Choose Product Category</label>
+          <select
+            name="productCategory"
+            id="productCategory"
+            class="form-control"
+          >
+            <option value="Mobiles" selected>Mobiles</option>
+            <option value="T.V.s">T.V.s</option>
+            <option value="Watches">Watches</option>
+            <option value="LapTops">LapTops</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="productDescription">Enter Description Price</label>
+          <textarea
+            id="productDescription"
+            type="text"
+            name="productDescription"
+            class="form-control"
+            placeholder="Product Description..."
+          ></textarea>
+        </div>
+        
+        <div class="button-group d-flex flex-wrap mb-3 gap-2">
+          <button
+            type="button"
+            class="add-product btn btn-outline-success min-width flex-grow-1"
+          >
+            Add Product
+          </button>
+          <button
+            type="button"
+            class="clear-form btn btn-outline-warning min-width flex-grow-1"
+          >
+            Clear Form
+          </button>
+          <button
+            type="button"
+            class="update-product btn btn-outline-info min-width flex-grow-1 d-none"
+          >
+            Update Product
+          </button>
+          <button
+            type="button"
+            class="cancel-update btn btn-outline-warning min-width flex-grow-1 d-none"
+          >
+            Cancel Update
+          </button>
+        </div>
+        <div class="search mb-5">
+          <input
+            id="searchProduct"
+            name="searchProduct"
+            type="text"
+            class="form-control mb-3 w-75 mx-auto"
+            placeholder="Search Products By Name or Category..."
+          />
+        </div>
+      </form>
+      <div class="table-container overflow-auto">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="showData"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

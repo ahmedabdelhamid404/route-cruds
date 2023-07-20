@@ -1,0 +1,8 @@
+#productDescription {
+  max-height: 200px;
+  min-height: 150px;
+}
+
+.text-description-overflow {
+  overflow-wrap: anywhere;
+}
